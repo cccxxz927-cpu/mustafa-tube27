@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#b51232">
+  <title>مصطفى تيوب | منصة مدرسي العراق</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<header class="topbar">
+  <button class="icon-btn" id="menuBtn" aria-label="القائمة">☰</button>
+  <a class="brand" href="/"><span class="play">▶</span><span>مصطفى <b>تيوب</b><small>MUSTAFA TUBE</small></span></a>
+  <label class="search"><span>⌕</span><input id="searchInput" placeholder="ابحث عن مدرس أو محاضرة..." autocomplete="off"></label>
+  <button class="icon-btn search-mobile" id="mobileSearch" aria-label="بحث">⌕</button>
+</header>
+<nav class="chips" id="subjects">
+  <button class="chip active" data-subject="الكل">الكل</button>
+  <button class="chip" data-subject="الإسلامية">الإسلامية</button>
+  <button class="chip" data-subject="اللغة العربية">اللغة العربية</button>
+  <button class="chip" data-subject="الإنكليزية">الإنكليزية</button>
+  <button class="chip" data-subject="الرياضيات">الرياضيات</button>
+  <button class="chip" data-subject="الفيزياء">الفيزياء</button>
+  <button class="chip" data-subject="الكيمياء">الكيمياء</button>
+  <button class="chip" data-subject="الأحياء">الأحياء</button>
+</nav>
+<main>
+  <section class="section">
+    <div class="section-head"><div><span class="eyebrow">تعلّم من أفضل المدرسين</span><h2>مدرسو العراق</h2></div><span class="muted" id="teacherCount">جارِ التحميل...</span></div>
+    <div class="teachers" id="teachers"><div class="loading">جارِ تحميل القنوات...</div></div>
+  </section>
+  <section class="section">
+    <div class="section-head"><div><span class="eyebrow">كل جديد بمكان واحد</span><h2 id="feedTitle">أحدث المحاضرات</h2></div><button class="text-btn" id="homeBtn">عرض الكل</button></div>
+    <div class="video-grid" id="videos"><div class="loading">جارِ تحميل المحاضرات...</div></div>
+  </section>
+</main>
+<footer><span class="brand small-brand"><span class="play">▶</span> مصطفى تيوب</span><span>منصة تعليمية تجمع قنوات مدرسي العراق</span></footer>
+<div class="modal" id="videoModal" aria-hidden="true">
+  <div class="modal-backdrop" data-close></div><div class="modal-box">
+    <button class="close" data-close aria-label="إغلاق">×</button>
+    <div class="player" id="player"></div><h3 id="modalTitle"></h3><p id="modalMeta" class="muted"></p>
+    <a id="youtubeLink" class="outline-btn" target="_blank" rel="noopener">فتح على يوتيوب ↗</a>
+  </div>
+</div>
+<div class="toast" id="toast"></div>
+<script src="/app.js"></script>
+</body></html>
